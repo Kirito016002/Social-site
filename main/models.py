@@ -14,7 +14,7 @@ class User(AbstractUser):
 class UserReletion(models.Model):
     from_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name ='+')
     to_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name ='to')
-
+   
     def __str__(self):
         return f"{self.from_user.username} - {self.to_user.username}"
 
